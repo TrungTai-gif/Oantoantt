@@ -65,6 +65,15 @@
         #next-btn:hover {
             background: #2980b9;
         }
+
+        #question {
+            padding-bottom: 20px;
+        }
+
+        /* Mô phỏng hiệu ứng hover trên điện thoại */
+        .option.hover {
+            background: #d0d0d0;
+        }
     </style>
 </head>
 
@@ -97,456 +106,508 @@
 
         const questions = [
             {
-                question: "Nội dung cốt lõi trong tư tưởng Hồ Chí Minh là....?",
+                question: "Chính sách tài khoản nào nên được thiết lập để ngăn chặn các cuộc tấn công ác ý vào tài khoản của user?",
                 options: {
-                    a: "Tư tưởng về đạo đức",
-                    b: "Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
-                    c: "Tư tưởng về văn hoá",
-                    d: "Tư tưởng về Đảng Cộng sản Việt Nam"
-                },
-                answer: "b"
-            },
-            {
-                question: `Tổng kết kinh nghiệm thắng lợi của cách mạng Việt Nam, Hồ Chí Minh khẳng định: 
-"Chúng tôi giành được thắng lợi đó là do.... (1)...., nhưng cần phải nhấn mạnh rằng mà không phải chỉ nhân dịp kỷ niệm lần thứ 100 ngày sinh Lênin - 
-Chúng tôi giành được những thắng lợi đó trước hết là nhờ cái vũ khí không gì thay thế được là.... (2)......"`,
-                options: {
-                    a: "(1) những nhân tố, (2) Đảng lãnh đạo, nhà nước quản lý",
-                    b: "(1) nhiều nhân tố, (2) chủ nghĩa Mác - Lênin",
-                    c: "(1) những yếu tố, (2) Đảng lãnh đạo",
-                    d: "(1) nhiều yếu tố, (2) Học thuyết Mác - Lênin"
-                },
-                answer: "b"
-            },
-            {
-                question: "Chủ tịch Hồ Chí Minh đã ví những đức tính nào của con người như trời có bốn mùa, đất có bốn phương?",
-                options: {
-                    a: "Cần, kiệm, liêm, chính",
-                    b: "Có nghĩa, có tình",
-                    c: "Chí công vô tư",
-                    d: "Trung với nước, hiếu với dân"
-                },
-                answer: "a"
-            },
-            {
-                question: `Hồ Chí Minh yêu cầu các cơ quan nhà nước, các cán bộ nhà nước đều phải vì nhân dân phục vụ. Người nói: 
-" Các công việc của chính phủ làm phải nhằm vào một mục đích duy nhất là ... (1).... cho mọi người. 
-Cho nên Chính phủ nhân dân bao giờ cũng phải đặt ... (2)... lên trên hết thảy. 
-Việc gì có lợi cho dân thì làm. Việc gì có hại cho dân thì phải tránh".`,
-                options: {
-                    a: "(1) đặt lợi ích, (2) quyền tự do, hạnh phúc",
-                    b: "(1) đặt lợi ích, (2) quyền hạnh phúc, tự do",
-                    c: "(1) mưu cầu hạnh phúc, (2) quyền lợi dân",
-                    d: "(1) mưu tự do hạnh phúc, (2) quyền lợi dân"
+                    a: "Disable tài khoản không dùng đến",
+                    b: "Ngày hết hạn tài khoản",
+                    c: "Hạn chế thời gian",
+                    d: "Giới hạn số lần logon"
                 },
                 answer: "d"
             },
             {
-                question: "Chủ tịch Hồ Chí Minh xác định yếu tố nào là gốc của người cách mạng?",
+                question: "X800 là một",
                 options: {
-                    a: "Đạo đức",
-                    b: "Phẩm chất chính trị",
+                    a: "Một dịch vụ không đáp ứng yêu cầu không thể từ chối (non-reputation)",
+                    b: "Dịch vụ an toàn",
+                    c: "Cơ chế an toàn",
+                    d: "Là một tiêu chuẩn",
+                    e: "Là một tiêu chuẩn mã hóa"
+                },
+                answer: "b"
+            },
+            {
+                question: "Audit (kiểm tra, kiểm toán) trong mô hình AAA (an toàn CSDL) nhằm",
+                options: {
+                    a: "Tất cả đều đúng",
+                    b: "Xác thực đó là ai",
+                    c: "Cấp quyền ai có thể làm gì",
+                    d: "Ai đã làm gì"
+                },
+                answer: "a"
+            },
+            {
+                question: "Phòng chống tấn công Tấn công từ chối dịch vụ phân tán (DDOS)",
+                options: {
+                    a: "Cách hiệu quả duy nhất là lưu trữ và phục hồi (backup và restore)",
+                    b: "Chỉ có thể dùng tường lửa",
+                    c: "Có thể hạn chế trong bằng cách lập trình",
+                    d: "Hiện nay đã có cách phòng chống hiệu quả"
+                },
+                answer: "c"
+            },
+            {
+                question: "RSA là giải thuật",
+                options: {
+                    a: "Mã khóa riêng",
+                    b: "mã hóa khóa công khai",
+                    c: "Mã hóa khóa bí mật",
+                    d: "Tổ chức quản lý mã hóa"
+                },
+                answer: "b"
+            },
+            {
+                question: "Mã hóa công khai",
+                options: {
+                    a: "Tất cả đều đúng",
+                    b: "Dùng một khóa để giải mã một khóa để mã hóa",
+                    c: "Dùng khóa Public để mã hóa",
+                    d: "Dùng khóa Public để giải mã"
+                },
+                answer: "a"
+            },
+            {
+                question: "X=Ex(Y). Bản mã là",
+                options: {
+                    a: "Y",
+                    b: "X",
+                    c: "K",
+                    d: "D"
+                },
+                answer: "b"
+            },
+            {
+                question: "Chứng nhận (certificate) chứa thông tin?",
+                options: {
+                    a: "Chữ ký",
+                    b: "Thuật toán tạo chữ ký",
                     c: "Tất cả đều đúng",
-                    d: "Tài năng"
+                    d: "Thông tin thuật toán tạo mã khoá"
                 },
-                answer: "a"
+                answer: "c"
             },
             {
-                question: "Theo Hồ Chí Minh, những phẩm chất thống nhất của con người là gì?",
+                question: "Mã Ceaser của 'party' là",
                 options: {
-                    a: "Đạo đức và con người",
-                    b: "Đạo đức và thái độ",
-                    c: "Đạo đức và tư duy",
-                    d: "\"Hồng\" và \"Chuyên\""
+                    a: "seuwb",
+                    b: "sduzb",
+                    c: "tduwb",
+                    d: "sduwb"
                 },
                 answer: "d"
             },
             {
-                question: "Tư tưởng Hồ Chí Minh về xây dựng Nhà nước trong sạch, vững mạnh, hiệu quả được thể hiện:",
+                question: "Nên cài mức truy cập mặc định là mức nào sau đây để tăng tính an toàn cho dữ liệu?",
                 options: {
-                    a: "Kiểm soát quyền lực nhà nước; Phòng, chống tiêu cực Nhà nước",
-                    b: "Nhà nước pháp quyền; Phòng, chống tiêu cực Nhà nước",
-                    c: "Kiểm soát quyền lực nhà nước; Phòng, chống tiêu cực Nhà nước; Nhà nước thượng tôn pháp luật; Nhà nước hợp hiến, hợp pháp",
-                    d: "Kiểm soát quyền lực nhà nước; Phòng, chống tiêu cực Nhà nước; Nhà nước thượng tôn pháp luật"
+                    a: "No access",
+                    b: "Write access",
+                    c: "Full access",
+                    d: "Read access"
+                },
+                answer: "a"
+            },
+            {
+                question: "Chiều dài tối thiểu mặc định của mật khẩu là ?",
+                options: {
+                    a: "12 đến 15 ký tự",
+                    b: "Tùy trường hợp",
+                    c: "8 ký tự",
+                    d: "3 đến 5 ký tự"
                 },
                 answer: "c"
             },
             {
-                question: `Tìm cụm từ đúng điền vào chỗ trống: 
-"Nước ta là nước dân chủ, địa vị cao nhất là dân,......"`,
+                question: "Để ngăn tấn công DoS, một quản trị mạng chặn nguồn IP với tường lửa, nhưng tấn công vẫn tiếp diễn. Điều gì có khả năng xảy ra nhất?",
                 options: {
-                    a: "Vì nhà nước là của dân",
-                    b: "Vì nhà nước là của dân",
-                    c: "Vì dân là chủ",
-                    d: "Vì dân làm chủ"
+                    a: "Máy đích bị virus",
+                    b: "Sâu DoS đã lây nhiễm cục bộ",
+                    c: "Tường lửa chưa hiệu quả",
+                    d: "Hệ thống mạng bị lỗi"
+                },
+                answer: "b"
+            },
+            {
+                question: "Các giao thức nào sau đây làm việc trên lớp IP để bảo vệ thông tin IP trên mạng?",
+                options: {
+                    a: "SSL",
+                    b: "IPSec",
+                    c: "IPX",
+                    d: "TCP/IP"
+                },
+                answer: "b"
+            },
+            {
+                question: "Mã hóa Feistel có kích thước khóa lớn thì sẽ?",
+                options: {
+                    a: "Khó mã hóa",
+                    b: "Dễ mã hóa, mã hóa nhanh",
+                    c: "Khó mã hóa, mã hóa chậm",
+                    d: "Mã hóa chậm"
+                },
+                answer: "d"
+            },
+            {
+                question: "Giải mã là",
+                options: {
+                    a: "quá trình biến đổi thông tin từ dạng không đọc được sang dạng đọc được.",
+                    b: "quá trình tấn công tìm bản rõ đọc được từ bản mã",
+                    c: "quá trình biến đổi thông tin từ dạng đọc được sang dạng không đọc được",
+                    d: "quá trình tấn công hệ mật mã để tìm bản rõ và khóa bí mật."
+                },
+                answer: "a"
+            },
+            {
+                question: "Để đảm bảo an toàn thông tin, bằng cách",
+                options: {
+                    a: "kết hợp các biện pháp.",
+                    b: "sử dụng phương pháp mã hóa",
+                    c: "sử dụng tường lửa",
+                    d: "phân quyền truy cập thông tin"
+                },
+                answer: "a"
+            },
+            {
+                question: "Hàm phi Ole của n là",
+                options: {
+                    a: "Số các số nguyên tố nhỏ hơn n",
+                    b: "Số các số nguyên nhỏ hơn n",
+                    c: "Số các số nguyên tố cùng nhau với n và nhỏ hơn n",
+                    d: "Số các số nguyên tố cùng nhau với n"
                 },
                 answer: "c"
             },
             {
-                question: `Trong tác phẩm *Đường Cách Mệnh*, Hồ Chí Minh khẳng định: 
-"Cách mạng trước hết phải có ..(1)...., để trong thì vận động và tổ chức dân chúng, 
-ngoài thì liên lạc với dân tộc bị áp bức và vô sản giai cấp mọi nơi......... (2)..., 
-cũng như người cầm lái có vững thuyền mới chạy."`,
+                question: "Chọn câu đúng",
                 options: {
-                    a: "(1) Chính đảng cách mệnh, (2) Đảng có mạnh, cách mệnh mới thành công",
-                    b: "(1) đảng cách mệnh, (2) Đảng có mạnh, thì cách mạng mới thành công",
-                    c: "(1) đảng cách mệnh, (2) Đảng có vững, cách mệnh mới thành công",
-                    d: "(1) Đảng, (2) Đảng có mạnh, thì cách mệnh mới thành công"
+                    a: "Chữ kí số với chữ kí điện tử là một",
+                    b: "Chữ ký số để ký các văn bản số",
+                    c: "Chữ kí số là trường hợp riêng của chữ kí điện tử, được hình thành từ các thuật toán mã công khai",
+                    d: "Chữ kí số là dãy số đặc biệt"
                 },
                 answer: "c"
             },
             {
-                question: "Có mấy tiền đề tư tưởng lý luận cơ bản trong việc hình thành Tư tưởng Hồ Chí Minh?",
+                question: "Cho sơ đồ thể hiện giải thuật mã hóa DES như sau: Trong sơ đồ có phần chưa chính xác, đó là phần nào trong các điểm được đánh dấu sau:",
                 options: {
-                    a: "4",
-                    b: "5",
+                    a: "3",
+                    b: "4",
+                    c: "1",
+                    d: "2"
+                },
+                answer: "d"
+            },
+            {
+                question: "Cho sơ đồ thể hiện giải thuật mã hóa DES như sau: Trong sơ đồ có phần chưa chính xác, đó là phần nào trong các điểm được đánh dấu sau:",
+                options: {
+                    a: "1,2",
+                    b: "3",
+                    c: "1",
+                    d: "3,4"
+                },
+                answer: "d"
+            },
+            {
+                question: "Người A và người B dùng sơ đồ kí và sơ đồ mã hóa RSA, thực hiện theo quy trình mã trước kí sau. Người A có khóa (p,q,e) = (17,3,5); Người B có khóa (p,q,e) = (11,5,13). B mã bản rõ m = 10 để gửi cho A. Hỏi B dùng khóa nào để mã?",
+                options: {
+                    a: "17",
+                    b: "(13,55)",
+                    c: "11",
+                    d: "(5,51)"
+                },
+                answer: "d"
+            },
+            {
+                question: "Người A và người B dùng sơ đồ kí và sơ đồ mã hóa RSA, thực hiện theo quy trình mã trước kí sau. Người A có khóa (p,q,e) = (17,3,5); Người B có khóa (p,q,e) = (11,5,13). A mã bản rõ để gửi bản mã cho B thì bản mã nhỏ hơn giá trị nào sau đây?",
+                options: {
+                    a: "17",
+                    b: "44",
+                    c: "55",
+                    d: "51"
+                },
+                answer: "c"
+            },
+            {
+                question: "Virus có thể lây nhiễm thông qua thiết bị nào?",
+                options: {
+                    a: "Tất cả",
+                    b: "Thẻ nhớ",
+                    c: "Phòng CD",
+                    d: "USB"
+                },
+                answer: "a"
+            },
+            {
+                question: "Để thực hiện cuộc tấn công Trojan-Backdoor. Hacker sẽ thực hiện:",
+                options: {
+                    a: "Hacker dùng Trojan Server, tấn công vào máy nạn nhân qua các port nhận đượcc từ kỹ thuật Scanning.",
+                    b: "Trojan Server được cài trên máy nạn nhân. Hacker điều khiển bằng Trojan Client",
+                    c: "Trojan Client được cài trên máy nạn nhân. Hacker điều khiển bằng Trojan Server",
+                    d: "Hacker dùng Trojan Client, tấn công vào máy nạn nhân qua các port nhận được từ kỹ thuật Scanning."
+                },
+                answer: "b"
+            },
+            {
+                question: "Tác hại của virus máy tính?",
+                options: {
+                    a: "Phá hủy hoặc đánh cắp dữ liệu",
+                    b: "Tiêu tốn tài nguyên hệ thống.",
+                    c: "Gây khó chịu cho người dùng",
+                    d: "Tất cả các phương án"
+                },
+                answer: "d"
+            },
+            {
+                question: "Virus không thể ẩn mình vào đâu?",
+                options: {
+                    a: "DLL",
+                    b: "CMOS",
+                    c: "BIOS",
+                    d: "Process"
+                },
+                answer: "b"
+            },
+            {
+                question: "CIH là gì?",
+                options: {
+                    a: "Là một chủng virus máy tính",
+                    b: "Tên gọi khác của virus Chernobyl",
+                    c: "Khóa học An toàn mạng máy tính",
+                    d: "Là trojan giúp hacker phân tích dữ liệu"
+                },
+                answer: "b"
+            },
+            {
+                question: "Để tìm bản rõ người thám mã sử dụng",
+                options: {
+                    a: "Sử dụng phần mềm, công cụ hack",
+                    b: "Sử dụng khóa",
+                    c: "Kết hợp nhiều cách thức khác nhau",
+                    d: "Sử dụng phương pháp bài toán ngược"
+                },
+                answer: "c"
+            },
+            {
+                question: "Thuật toán chia Euclid mở rộng dùng để",
+                options: {
+                    a: "tính phần tử nghịch đảo của phép nhân",
+                    b: "tính nhanh một lũy thừa với số lớn",
+                    c: "tính phần tử nghịch đảo của phép nhân và tìm ước chung lớn nhất",
+                    d: "kiểm tra nhanh một số nguyên tố lớn"
+                },
+                answer: "c"
+            },
+            {
+                question: "Cho bản rõ 'verygood' khóa k=11. Khi mã hóa bản rõ với khóa k theo hệ mã dịch vòng ta sẽ thu được bản mã nào sau đây?",
+                options: {
+                    a: "GCPEUCRQ",
+                    b: "CRBUOAAG",
+                    c: "GPCARZZO",
+                    d: "CVPEIUEM"
+                },
+                answer: "c"
+            },
+            {
+                question: "Cho bản rõ 'young' khóa k=15. Khi mã hóa bản rõ với khóa k theo hệ mã dịch vòng ta sẽ thu được bản mã nào sau đây?",
+                options: {
+                    a: "NOTEZ",
+                    b: "MNITH",
+                    c: "NERKT",
+                    d: "NDJCV"
+                },
+                answer: "d"
+            },
+            {
+                question: "Cho mật mã Affine. K=(a,b) là khóa của hệ mật mã này. Hãy chọn khóa K",
+                options: {
+                    a: "(21,13)",
+                    b: "(20,12)",
+                    c: "(12,20)",
+                    d: "(13,29)"
+                },
+                answer: "a"
+            },
+            {
+                question: "Khi mã hóa bản rõ 'your' theo mã hoán vị ta sẽ thu được bản mã nào sau đây?",
+                options: {
+                    a: "YROU",
+                    b: "YROK",
+                    c: "YROI",
+                    d: "YROJ"
+                },
+                answer: "a"
+            },
+            {
+                question: "Cho bản mã “JT” khóa k là: 98, 33. Khi giải mã bản mã với khóa k theo hệ mã Hill ta sẽ thu được bản rõ nào sau đây? Biết hàm mã hóa y = kx",
+                options: {
+                    a: "ho",
+                    b: "tw",
+                    c: "ha",
+                    d: "he"
+                },
+                answer: "b"
+            },
+            {
+                question: "Độ an toàn của hệ mật phụ thuộc vào",
+                options: {
+                    a: "Thuật toán, không gian khóa và bản mã",
+                    b: "Tính bí mật của thuật toán",
+                    c: "Không gian khóa đủ lớn để phép vét cạn khóa là không thể thực hiện được",
+                    d: "Tính bí mật của khóa"
+                },
+                answer: "a"
+            },
+            {
+                question: "Người A và người B dùng sơ đồ kí và sơ đồ mã hóa RSA, thực hiện theo quy trình mã trước kí sau. Người A có khóa (p,q,e) = (17,3,5); Người B có khóa (p,q,e) = (11,5,13). A mã bản tin m = 10 gửi cho B. Hỏi A sử dụng khóa nào để mã?",
+                options: {
+                    a: "(13,55)",
+                    b: "(5,51)",
+                    c: "52",
+                    d: "55"
+                },
+                answer: "a"
+            },
+            {
+                question: "Luật An ninh mạng do cơ quan nào chủ trì soạn thảo?",
+                options: {
+                    a: "Bộ Công an",
+                    b: "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Quốc phòng",
+                    c: "Ban Cơ yếu Chính phủ",
+                    d: "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an"
+                },
+                answer: "a"
+            },
+            {
+                question: "Mô hình OSI chia ATTT thành bao nhiêu mức an toàn hệ thống?",
+                options: {
+                    a: "7",
+                    b: "Nhiều",
+                    c: "4",
+                    d: "2"
+                },
+                answer: "d"
+            },
+            {
+                question: "Mô hình OSI chia ATTT thành bao nhiêu mức an toàn do yếu tố con người?",
+                options: {
+                    a: "7",
+                    b: "4",
                     c: "2",
-                    d: "3"
-                },
-                answer: "d"
-            },
-            {
-                question: `Trong Di Chúc, Hồ Chí Minh căn dặn: 
-"Toàn Đảng, toàn dân ta ... (1), xây dựng một nước Việt Nam ....(2)..., 
-và góp phần xứng đáng vào sự nghiệp cách mạng thế giới."`,
-                options: {
-                    a: "(1) phấn đấu đoàn kết (2) hoà bình, thống nhất, độc lập, dân chủ và giàu mạnh",
-                    b: "(1) phấn đấu, (2) hoà bình, độc lập, dân chủ và giàu mạnh",
-                    c: "(1) đoàn kết (2) độc lập, thống nhất, dân chủ và giàu mạnh",
-                    d: "(1) đoàn kết phấn đấu, (2) hoà bình, thống nhất, độc lập, dân chủ và giàu mạnh"
-                },
-                answer: "d"
-            },
-            {
-                question: "Chọn đáp án đúng khi bàn về vai trò đạo đức trong tư tưởng Hồ Chí Minh:",
-                options: {
-                    a: "Đạo đức là văn minh trí tuệ",
-                    b: "Đạo đức là nhân tố tạo nên sức hấp dẫn chủ nghĩa xã hội",
-                    c: "Đạo đức là động lực của cách mạng xã hội chủ nghĩa",
-                    d: "Đạo đức là định hướng người cách mạng trong mọi khó khăn"
-                },
-                answer: "b"
-            },
-            {
-                question: `"Đoàn kết là một truyền thống cực kỳ quý báu của Đảng và của dân ta. 
-Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình". 
-Câu viết trên ở trong tác phẩm nào của Hồ Chí Minh?`,
-                options: {
-                    a: "Thường thức chính trị",
-                    b: "Di chúc",
-                    c: "Sửa đổi lối làm việc",
-                    d: "Đạo đức cách mạng"
-                },
-                answer: "b"
-            },
-            {
-                question: "Theo Tư tưởng Hồ Chí Minh, có mấy nguyên tắc cần thực hiện khi đoàn kết quốc tế?",
-                options: {
-                    a: "3 nguyên tắc",
-                    b: "5 nguyên tắc",
-                    c: "2 nguyên tắc",
-                    d: "4 nguyên tắc"
+                    d: "Nhiều"
                 },
                 answer: "c"
             },
             {
-                question: `"Tất cả các dân tộc trên thế giới đều sinh ra bình đẳng, 
-dân tộc nào cũng có quyền sống, quyền sung sướng và quyền tự do". 
-Hồ Chí Minh nói câu đó trong văn kiện nào?`,
+                question: "Tính sẵn sàng được dùng để đánh giá phương diện nào của Hệ thống?",
                 options: {
-                    a: "Tuyên ngôn độc lập",
-                    b: "Lời kêu gọi toàn quốc kháng chiến",
-                    c: "Đường cách mệnh",
-                    d: "Bản án chế độ thực dân Pháp"
-                },
-                answer: "a"
-            },
-            {
-                question: `Điền từ còn thiếu vào chỗ trống. Hồ Chí Minh từng chỉ rõ: 
-"Đoàn kết thực sự nghĩa là mục đích phải nhất trí và lập trường cũng phải nhất trí. 
-Đoàn kết thực sự nghĩa là ...(1), học những cái tốt của nhau, 
-phê bình những cái sai của nhau và phê bình trên lập trường thân ái,...(2).."`,
-                options: {
-                    a: "(1) vừa đoàn kết, vừa đấu tranh, (2) vì nước, vì dân",
-                    b: "(1) vừa đoàn kết, vừa đấu tranh, (2) yêu thương lẫn nhau",
-                    c: "(1) vừa đoàn kết, vừa hợp tác, (2) yêu thương lẫn nhau",
-                    d: "(1) vừa đoàn kết, vừa hợp tác, (2) vì nước, vì dân"
-                },
-                answer: "a"
-            },
-            {
-                question: `Hồ Chí Minh từng cảnh báo: 
-"Một dân tộc, (1)..., ngày hôm qua là vĩ đại, có sức hấp dẫn lớn, 
-không nhất định hôm nay và ngày mai vẫn được mọi người ....(2)....., 
-nếu lòng dạ không trong sáng nữa, nếu sa vào chủ nghĩa cá nhân"`,
-                options: {
-                    a: "(1) một đảng và mỗi con người, (2) yêu thích và ca ngợi",
-                    b: "(1) một đảng, (2) yêu mến và ca ngợi",
-                    c: "(1) một đảng, (2) yêu thích và ca ngợi",
-                    d: "(1) một đảng và mỗi con người, (2) yêu mến và ca ngợi"
+                    a: "độ an toàn",
+                    b: "độ chính xác",
+                    c: "độ sẵn sàng",
+                    d: "độ tin cậy"
                 },
                 answer: "d"
             },
             {
-                question: `Trong bài "Đạo đức cách mạng" (1955), Hồ Chí Minh viết:
-"Tuy năng lực và công việc của mỗi người khác nhau, người làm việc to, người làm việc nhỏ; 
-nhưng ai giữ được... (1).... đều là người ...(2)..."`,
+                question: "Trong các nguy cơ mất an toàn thông tin thì Chặn bắt thông tin là dạng",
                 options: {
-                    a: "(1) đạo đức, (2) tốt",
-                    b: "(1) đạo đức, (2) cao thượng",
-                    c: "(1) đức và tài, (2) tốt",
-                    d: "(1) đức tính tốt, (2) cao thượng"
+                    a: "Thông tin được gửi từ nguồn bị chặn tại một điểm trên đường đi vẫn đến được đích với thông tin bị sai lệch",
+                    b: "Thông tin được gửi từ nguồn giả mạo",
+                    c: "Thông tin được gửi từ nguồn bị chặn tại một điểm trên đường đi và không đến được đích",
+                    d: "Thông tin được gửi từ nguồn bị chặn tại một điểm trên đường đi vẫn đến được đích với đầy đủ thông tin nhưng thông tin đã bị lộ"
                 },
-                answer: "b"
+                answer: "d"
             },
             {
-                question: "Những tác phẩm dưới đây, tác phẩm nào không phải là của Hồ Chí Minh?",
+                question: "Khi kết thúc công việc trên máy tính xách tay và ra ngoài khoảng 1 tiếng vào buổi trưa ta nên làm gì trước khi ra ngoài?",
                 options: {
-                    a: "Tuyên ngôn của Đảng Cộng sản",
-                    b: "Tuyên ngôn Độc lập.",
-                    c: "Đường cách mệnh.",
-                    d: "Bản án chế độ thực dân Pháp"
-                },
-                answer: "a"
-            },
-            {
-                question: "Hồ Chí Minh quan niệm dân chủ nghĩa là:",
-                options: {
-                    a: "Dân là chủ",
-                    b: "Dân là chủ và dân làm chủ",
-                    c: "Quyền lực thuộc về nhân dân",
-                    d: "Dân làm chủ"
-                },
-                answer: "b"
-            },
-            {
-                question: "Theo tư tưởng Hồ Chí Minh: bản chất giai cấp công nhân thống nhất với tính nhân dân và tính dân tộc của Nhà nước Việt Nam, quan điểm này đúng hay sai?",
-                options: {
-                    a: "Đúng",
-                    b: "Sai"
-                },
-                answer: "a"
-            },
-            {
-                question: "Hồ Chí Minh từng nhấn mạnh: \"Phải giữ gìn....(1)... thật trong sạch, phải xứng đáng ...(2).... thật trung thành của nhân dân\"",
-                options: {
-                    a: "(1) Đảng, (2) vừa là người lãnh đạo, vừa là người đầy tớ",
-                    b: "(1) Đảng ta, (2) là người lãnh đạo, là người đầy tớ",
-                    c: "(1) Đảng ta, (2) vừa là người lãnh đạo, là người đầy tớ",
-                    d: "(1) Đảng, (2) vừa là người lãnh đạo, là người đầy tớ"
-                },
-                answer: "b"
-            },
-            {
-                question: "Chọn cụm từ đúng điền vào chỗ trống:\n\nVăn hoá ......cho quốc dân đi",
-                options: {
-                    a: "Mở đường",
-                    b: "Dẫn lối",
-                    c: "Soi đường",
-                    d: "Dẫn đường"
+                    a: "Shut down và đóng máy lại",
+                    b: "Log out khỏi máy tính xách tay",
+                    c: "Chắc chắn rằng máy tính xách tay của ta được bảo vệ trên bàn làm việc hay được cất, khóa an toàn",
+                    d: "Nói với đồng nghiệp để mắt đến máy tính xách tay"
                 },
                 answer: "c"
             },
             {
-                question: "Điền vào chỗ trống. Hồ Chí Minh từng viết:\n\n\"Lực lượng chủ yếu trong khối đoàn kết dân tộc là... (1)..., cho nên... (2) là nền tảng của Mặt trận dân tộc thống nhất\"",
+                question: "Trong khoảng thời gian nguồn điện bị sụt áp do quá tải bất thường, thiết bị nào sau đây là hữu dụng nhất trong việc duy trì các mức nguồn điện thích hợp?",
                 options: {
-                    a: "(1) công nông, (2) công nông",
-                    b: "(1) công nông, (2) liên minh công nông",
-                    c: "(1) công - nông - trí, (2) công - nông - trí",
-                    d: "(1) công - nông - trí, (2) liên minh công - nông - trí"
+                    a: "UPS",
+                    b: "Dự phòng nguồn điện của máy phát điện",
+                    c: "Thanh nguồn điện",
+                    d: "Ổn áp"
+                },
+                answer: "d"
+            },
+            {
+                question: "Trong các nguy cơ mất an toàn thông tin thì Ngăn chặn thông tin là dạng",
+                options: {
+                    a: "Thông tin được gửi từ nguồn bị chặn tại một điểm trên đường đi vẫn đến được đích với thông tin bị sai lệch",
+                    b: "Thông tin được gửi từ nguồn bị chặn tại một điểm trên đường đi và không đến được đích",
+                    c: "Thông tin được gửi từ nguồn bị chặn tại một điểm trên đường đi vẫn đến được đích với đầy đủ thông tin nhưng thông tin đã bị lộ",
+                    d: "Thông tin được gửi từ nguồn giả mạo"
                 },
                 answer: "b"
             },
             {
-                question: "Tiền đề tư tưởng lý luận hình thành tư tưởng Hồ Chí Minh chỉ là kết hợp của chủ nghĩa Mác-Lênin vào điều kiện cụ thể của nước ta và tiếp thu tinh hoa văn hoá nhân loại. Đúng hay sai?",
+                question: "Phá hoại thụ động mang đặc trưng gì?",
                 options: {
-                    a: "Đúng",
-                    b: "Sai"
+                    a: "Chặn bắt và thay đổi thông tin",
+                    b: "Chặn bắt và khám phá nội dung thông tin",
+                    c: "Chặn bắt và phân tích dòng số liệu",
+                    d: "Chặn bắt hoặc giám sát thông tin"
                 },
-                answer: "b"
+                answer: "d"
             },
             {
-                question: "Chọn đáp án đúng về vai trò của văn hoá trong quan điểm Hồ Chí Minh",
+                question: "Trong khoảng thời gian nguồn điện cung cấp cho hệ thống máy tính chập chờn không ổn định, có thể bị ngắt bất cứ lúc nào, thiết bị nào có thể hỗ trợ cấp nguồn giúp bảo vệ An toàn thông tin?",
                 options: {
-                    a: "Văn hoá là sức mạnh của người cách mạng",
-                    b: "Văn hoá là mục tiêu, động lực của sự nghiệp cách mạng",
-                    c: "Văn hoá là gốc, là nền tảng tinh thần của xã hội",
-                    d: "Văn hoá, chính trị là mặt trận trong cách mạng"
-                },
-                answer: "b"
-            },
-            {
-                question: "Hồ Chí Minh quan niệm “đạo đức là cái gốc của người cách mạng\". Đúng hay sai?",
-                options: {
-                    a: "Đúng",
-                    b: "Sai"
-                },
-                answer: "a"
-            },
-            {
-                question: "Trong lời kêu gọi Liên hợp quốc năm 1946, Hồ Chí Minh khẳng định: \"Nhân dân chúng tôi thành thật mong muốn hoà bình. Nhưng nhân dân chúng tôi cũng .....(1)... để bảo vệ những quyền thiêng liêng nhất: Toàn vẹn lãnh thổ cho ....(2).. cho đất nước\"",
-                options: {
-                    a: "(1) kiên quyết chiến đấu, (2) Tổ quốc và độc lập",
-                    b: "(1) chiến đấu đến cùng, (2) nền độc lập",
-                    c: "(1) kiên quyết chiến đấu đến cùng, (2) Tổ quốc và độc lập",
-                    d: "(1) kiên quyết chiến đấu đến cùng, (2) nền độc lập"
+                    a: "Ổn áp",
+                    b: "Thanh nguồn điện",
+                    c: "UPS",
+                    d: "Dự phòng nguồn điện của máy phát điện"
                 },
                 answer: "c"
             },
             {
-                question: "Khẳng định vai trò của đoàn kết, Hồ Chí Minh chỉ rõ: \"Đoàn kết là sức mạnh, là .....của thành công\"",
+                question: "Áp dụng IPSec vào hệ thống VPN, phương thức chứng thực được hỗ trợ sẵn trong dịch vụ RRAS của Windows là:",
                 options: {
-                    a: "Cội nguồn",
-                    b: "Chìa khoá",
-                    c: "Gốc rễ",
-                    d: "Then chốt"
+                    a: "Encapsulating Security Payload(ESP)",
+                    b: "Certufied Authencation(CA)",
+                    c: "Kerberos",
+                    d: "Internet Key Exchange (IKE)"
                 },
                 answer: "d"
             },
             {
-                question: "Theo quan điểm Hồ Chí Minh, để thực hiện \"Chiến lược trồng người\" cần nhiều biện pháp, song biện pháp nào là quan trọng nhất?",
+                question: "Luật An ninh mạng được thông qua ngày tháng năm nào?",
                 options: {
-                    a: "Phát huy truyền thống đoàn kết",
-                    b: "Phát triển giáo dục và đào tạo",
-                    c: "Nâng cao đời sống tinh thần",
-                    d: "Nâng cao đời sống vật chất"
-                },
-                answer: "b"
-            },
-            {
-                question: "Vấn đề dân tộc trong tư tưởng Hồ Chí Minh là vấn đề:",
-                options: {
-                    a: "Dân tộc thuộc địa",
-                    b: "Dân tộc phương Đông",
-                    c: "Hình thành dân tộc",
-                    d: "Dân tộc nói chung"
+                    a: "12/06/2018",
+                    b: "01/01/2018",
+                    c: "25/06/2018",
+                    d: "01/01/2019"
                 },
                 answer: "a"
             },
             {
-                question: "Theo tư tưởng Hồ Chí Minh, nội dung cơ bản của đạo đức cách mạng bao gồm những phẩm chất nào sau đây?",
+                question: "Luật An ninh mạng do cơ quan nào chủ trì soạn thảo?",
                 options: {
-                    a: "Trung với nước, hiếu với dân; Tinh thần độc lập, tự chủ; Thương yêu con người, sống có tình có nghĩa; Tinh thần quốc tế trong sáng",
-                    b: "Trung với nước, hiếu với dân; Yêu thương con người; Sống tình nghĩa chan hoà",
-                    c: "Trung với nước, hiếu với dân; Cần, kiệm, liêm, chính, chí công vô tư; Thương yêu con người, sống có tình có nghĩa; Tinh thần quốc tế trong sáng",
-                    d: "Trung với nước, hiếu với dân; Cần, kiệm, liêm, chính, chí công vô tư; Tinh thần độc lập, tự chủ; Tinh thần quốc tế trong sáng"
-                },
-                answer: "c"
-            },
-            {
-                question: "Theo Hồ Chí Minh, văn hoá có chức năng bồi dưỡng tư tưởng đúng đắn và những tình cảm cao đẹp cho con người. Anh (chị) hãy cho biết quan điểm này đúng hay sai?",
-                options: {
-                    a: "Đúng",
-                    b: "Sai"
+                    a: "Bộ Công an",
+                    b: "Ban Cơ yếu Chính phủ",
+                    c: "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Quốc phòng",
+                    d: "Lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an"
                 },
                 answer: "a"
             },
             {
-                question: "Trong tác phẩm Đường cách mệnh, Hồ Chí Minh khẳng định: \"Đảng muốn vững thì phải có ....(1)..., trong đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy. Đảng mà không có chủ nghĩa cũng như người ... (2)... tàu không có bàn chỉ nam.\"",
+                question: "Chữ ký số được sử dụng cho mục đích gì?",
                 options: {
-                    a: "(1) chủ nghĩa Mác - Lênin làm cốt, (2) chẳng có trí khôn",
-                    b: "(1) chủ nghĩa, (2) chẳng có trí khôn",
-                    c: "(1) chủ nghĩa Mác - Lênin làm cốt, (2) không có trí khôn",
-                    d: "(1) chủ nghĩa làm cốt, (2) không có trí khôn"
-                },
-                answer: "d"
-            },
-            {
-                question: "Hồ Chí Minh luôn nêu cao tính nghiêm minh của pháp luật. Người tuyên bố: \"Pháp luật Việt Nam tuy....(1)... với những người biết cải tà quy chính, nhưng sẽ ...(2)... những tên Việt gian đầu sỏ đã bán nước buôn dân\"",
-                options: {
-                    a: "(1) khoan hồng, (2) trừng trị",
-                    b: "(1) tha thứ, (2) trừng trị",
-                    c: "(1) khoan hồng, (2) thẳng tay trừng trị",
-                    d: "(1) tha thứ, (2) thẳng tay trừng trị"
-                },
-                answer: "c"
-            },
-            {
-                question: "Nguyên tắc xây dựng đạo đức mới theo tư tưởng Hồ Chí Minh là gì?",
-                options: {
-                    a: "Phải tu dưỡng đạo đức suốt đời, kiên trì, bền bỉ hằng ngày;",
-                    b: "Xây đi đôi với chống;",
-                    c: "Nói đi đôi với làm, phải nêu gương về đạo đức;",
-                    d: "Tất cả đều đúng"
-                },
-                answer: "d"
-            },
-            {
-                question: "Trong quá trình hình thành và phát triển tư tưởng Hồ Chí Minh, thời kỳ nào là thời kỳ tìm tòi con đường cứu nước giải phóng dân tộc?",
-                options: {
-                    a: "1930-1945",
-                    b: "Trước năm 1911",
-                    c: "Khoảng 1911-1920",
-                    d: "1921-1930"
-                },
-                answer: "c"
-            },
-            {
-                question: "Chọn câu trả lời đúng nhất điền vào chỗ trống: \"Nước Việt Nam có quyền hưởng tự do và độc lập, và thực sự đã thành một nước tự do và độc lập. Toàn thể dân Việt Nam quyết đem......(1)..........(2)....... để giữ vững quyền tự do và độc lập ấy\"",
-                options: {
-                    a: "(1) tất cả lực lượng, (2) tính mệnh và của cải",
-                    b: "(1) tất cả tinh thần và lực lượng, (2) tính mạng và của cải",
-                    c: "(1) tất cả tinh thần và lực lượng, (2) tính mệnh và của cải",
-                    d: "(1) tất cả tinh thần, (2) tính mệnh và của cải"
-                },
-                answer: "b"
-            },
-            {
-                question: "Hồ Chí Minh từng khẳng định: \"Tôi chỉ có một sự ham muốn, ham muốn tột bậc, là làm sao cho nước ta được ....(1).., dân ta (2)..., đồng bào ....(3)..., ai cũng được học hành\"",
-                options: {
-                    a: "(1) hoàn toàn độc lập, (2) được hoàn toàn tự do, (3) ai cũng có cơm no áo ấm",
-                    b: "(1) hoàn toàn độc lập, (2) được hoàn toàn tự do, (3) có cơm ăn áo mặc",
-                    c: "(1) hoàn toàn độc lập, (2) được hoàn toàn tự do, (3) ai cũng có cơm ngon áo ấm",
-                    d: "(1) hoàn toàn độc lập, (2) được hoàn toàn tự do, (3) ai cũng có cơm ăn, áo mặc"
-                },
-                answer: "d"
-            },
-            {
-                question: "Mặt trận dân tộc thống nhất phải được xây dựng trên nền tảng khối liên minh công-nông-trí đặt dưới sự lãnh đạo của Đảng. Đúng hay sai?",
-                options: {
-                    a: "Đúng",
-                    b: "Sai"
+                    a: "Để kiểm tra định danh người gửi",
+                    b: "Thu hồi một chứng chỉ",
+                    c: "Cung cấp chứng chỉ",
+                    d: "Để bảo mật tài liệu sao cho người ngoài không đọc được"
                 },
                 answer: "a"
-            },
-            {
-                question: "Theo quan điểm của Hồ Chí Minh: Đảng Cộng sản Việt Nam ra đời là kết quả của sự kết hợp giữa chủ nghĩa Mác và phong trào công nhân. Đúng hay sai?",
-                options: {
-                    a: "Đúng",
-                    b: "Sai"
-                },
-                answer: "b"
-            },
-            {
-                question: "Theo Tư tưởng Hồ Chí Minh, có mấy nguyên tắc xây dựng đạo đức cách mạng?",
-                options: {
-                    a: "3 nguyên tắc",
-                    b: "2 nguyên tắc",
-                    c: "4 nguyên tắc",
-                    d: "5 nguyên tắc"
-                },
-                answer: "a"
-            },
-            {
-                question: "Hồ Chí Minh từng viết: \"Đạo đức cũ như người ... (1)... chân chồng lên trời. Đạo đức mới như người...(2).., đầu ngửng lên trời\"",
-                options: {
-                    a: "(1) đầu ngược xuống đất, (2) hai chân đứng vững được dưới đất",
-                    b: "(1) đầu chổng ngược xuống đất, (2) hai chân đứng vững dưới đất",
-                    c: "(1) đầu chống ngược xuống đất, (2) hai chân đứng vững được dưới đất",
-                    d: "(1) đầu chổng ngược xuống đất, (2) hai chân đứng được dưới đất"
-                },
-                answer: "a"
-            },
-            {
-                question: "Giai đoạn hình thành tư tưởng yêu nước và chí hướng cách mạng của Hồ Chí Minh được tính từ:",
-                options: {
-                    a: "Từ năm 1930 đến năm 1945",
-                    b: "Từ năm 1920 đến năm 1930",
-                    c: "Từ năm 1911 đến năm 1920",
-                    d: "Trước năm 1911"
-                },
-                answer: "d"
             }
+
+
         ];
 
         let currentQuestion = 0;
@@ -599,6 +660,20 @@ nhưng ai giữ được... (1).... đều là người ...(2)..."`,
         };
 
         showQuestion();
+
+        // Thêm hiệu ứng hover cho thiết bị cảm ứng
+        document.addEventListener("touchstart", function () {
+            document.querySelectorAll(".option").forEach(function (el) {
+                el.addEventListener("touchstart", function () {
+                    // Xoá hover cũ
+                    document.querySelectorAll(".option").forEach(opt => opt.classList.remove("hover"));
+                    // Gắn hover mới
+                    el.classList.add("hover");
+                });
+            });
+        });
+
+
     </script>
 
 </body>
